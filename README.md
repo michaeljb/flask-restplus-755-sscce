@@ -1,7 +1,8 @@
 # FRP-SSCCE
 
 This is an [SSCCE](http://www.sscce.org/) for an issue I have encountered with
-[flask-restplus v0.13.0](https://github.com/noirbizarre/flask-restplus).
+[flask-restplus v0.13.0](https://github.com/noirbizarre/flask-restplus). Issue
+link: https://github.com/noirbizarre/flask-restplus/issues/755
 
 When the Swagger location can be accessed via different URLs due to proxy (e.g.,
 nginx or Apache) configuration, flask-restplus caches the `basePath` value based
