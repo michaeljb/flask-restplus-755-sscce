@@ -1,0 +1,10 @@
+name: frp-sscce
+channels:
+  - conda-forge/channel/main
+  - defaults
+dependencies:
+- flask=1.0.2
+- python=3.7.*
+- pip:
+    - flask-restplus==0.13.0
+prefix: /opt/miniconda/envs/frp-sscce

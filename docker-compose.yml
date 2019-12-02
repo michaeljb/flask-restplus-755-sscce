@@ -1,0 +1,29 @@
+version: '3.4'
+services:
+
+  api:
+    build: ./api
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_APP=frp_sscce
+      - FLASK_DEBUG=trueg
+    volumes:
+      - "./api:/opt/frp-sscceg"
+    networks:
+      - frp-sscce
+    dns_search: .
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - frp-sscce
+    dns_search: .
+    depends_on:
+      - api
+
+networks:
+  frp-sscce:
